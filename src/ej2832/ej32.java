@@ -6,5 +6,7 @@ public class ej32 {
 		Scanner tabla = new Scanner
 		
 	}
+	
+	
 
 }
