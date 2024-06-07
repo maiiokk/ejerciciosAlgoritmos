@@ -1,13 +1,13 @@
-package ej42;
+package ej43;
 
 import java.util.Scanner;
 
-public class ej42 {
+public class ej43 {
 
 	public static void main(String[] args) {
 		Scanner datos = new Scanner(System.in);
 
-		int[] numeros = { 1011, 2367, 8748, 9121, 817, 6423, 2034 };
+		int[] numeros = { 1011, 2367, 8748, 9121, 817, 6423, };
 		String[] nombre = { "Enrique", "Liliana", "Lucas", "Juan", "Fiorella", "Ariel", "Daiana" };
 		int codigoIng;
 
@@ -21,12 +21,27 @@ public class ej42 {
 				System.out.println("Y su nombre es: " + nombre[i]);
 				x = true;
 				break;
+
 			}
 		}
-		    if (x == false) {
-			    System.out.println("Ese codigo no existe, mal ahi. ");
-   
-		}
-	}
 
+		System.out.println("\nNombres y números de socio de personas con números de socio impares:");
+		
+		for (int i = 0; i < nombre.length; i++) {
+			if (numeros[i] %2 != 0) {
+
+				System.out.println("Numero: " + numeros[i]);
+				System.out.println("Nombre: "+ nombre[i]);
+				System.out.println("--------------------");
+				x = true;
+			}
+			
+		}
+		if (x == false) {
+			System.out.println("Ese codigo no existe, mal ahi. ");
+
+		}
+		
+		
+	}
 }
